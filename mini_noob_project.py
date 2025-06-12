@@ -55,3 +55,39 @@ elif player1 == "scissors":
         print("player2 wins! ")
 else:
     print("something went wrong!!!!!   :|")
+
+# ---------advanced </ROCK,PAPER,SCISSORS\>--------
+
+from random import randint
+
+player = input("player,make your move: ").lower()
+rand_num = randint(0,2)
+if rand_num == 0:
+    computer = "rock"
+elif rand_num == 1:
+    computer = "paper"
+else:
+    computer = "scissors"
+
+print(f"computer plays {computer}")
+
+if player == computer:
+    print("it's a fucking tie :( ")
+elif player == "rock":
+    if computer == "scissors":
+        print("player wins :)!")
+    elif computer == "paper":
+        print("computer wins :]!")
+elif player == "paper":
+    if computer == "rock":
+        print("computer wins! :] ")
+    elif computer == "scissors":
+        print("computer wins! :] ")
+elif player == "scissors":
+    if computer == "paper":
+        print("player wins! :) ")
+    elif computer == "rock":
+        print("computer wins! :] ")
+else:
+    print("something went wrong!!!!!   :|")
+
