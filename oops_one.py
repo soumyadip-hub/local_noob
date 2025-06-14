@@ -39,4 +39,23 @@ e1 = Employee(34000,"john doe",4)
 
 e1.get_info()
 
-# ---------
+# ---------(read about instances and attributes)-----
+class Employee:
+    company = "Asus"    #this is class attribute
+
+    def __init__(self, salary, name, bond,company):
+        self.salary = salary # Creates an instance attribute for salary
+        self.name = name
+        self.bond = bond
+        self.company = company
+
+    def get_salary(self):
+        return self.salary
+    
+    def get_info(self): # Corrected indentation here
+        print(f"The name of the employee is {self.name}. Salary is {self.salary}. The bond is for {self.bond} years.")
+    
+e1 = Employee(34000,"john",3,"tesla")
+print(e1.company) #will always print instance attribute whenever present
+print(Employee.company)  # type: ignore #this will always print the class attribute
+
