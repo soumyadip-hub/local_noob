@@ -59,3 +59,20 @@ e1 = Employee(34000,"john",3,"tesla")
 print(e1.company) #will always print instance attribute whenever present
 print(Employee.company)  # type: ignore #this will always print the class attribute
 
+# -------we learn about inheritance and use of super-------
+
+class Animal: #parent class (superclass)
+    location = "australia"
+    def __init__(self,name):
+        self.name = name
+    def speak(self):
+        print("speaking now....")
+
+class dog(Animal):  #this is how inheritance is done in python
+    def speak(self):
+        super().speak() #we are using the speak function of the parent class
+        print("woof")
+
+
+d = dog("bruno")
+d.speak()
