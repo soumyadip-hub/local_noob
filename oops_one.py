@@ -1,15 +1,18 @@
-# ----oops tell avout class--------
-class user:
-    pass
+# # ----oops tell about class & objects--------
+# class: class is a blueprint or a template. eg. form for a exam that conatins name,age,electives,fathersname
+# objects : specific instance created from the template (class). Eg. form which conatins data from john doe
 
-user1 = user()
-user2 = user()
-user3 = user()
-user4 = user()
-print(user1)
-print(user2)
-print(user3)
+class Employee:
+    company = "Hp"
+                            # this is class
+    def get_salary(self):
+        return 34000
+    
+e = Employee()      #An object of class Employee is created here
+print(e.get_salary())   #Employee e's get salary method is called 
 
-# --------tell about gives attribute to class-----
+e2 = Employee()
+print(e2.get_salary())
+print(e2.company)
 
 
