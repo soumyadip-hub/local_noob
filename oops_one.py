@@ -76,3 +76,28 @@ class dog(Animal):  #this is how inheritance is done in python
 
 d = dog("bruno")
 d.speak()
+
+# -------we read about method overriding and operator overloading----------
+
+class point:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+    def sum(self,p):
+        return point((self.x + p.x),(self.y + p.y))
+
+    def print_points(self):
+        print(f"x is {self.x} and y is {self.y}")
+
+    # now using operator oveloading method 
+    def __add__(self, p):
+        return point((self.x + p.x),(self.y + p.y))
+
+
+p1 = point(3,2)
+p2 = point(7,3)
+
+# p = p1.sum(p2) # returns a new piont which is sum of p1 and p2
+p = p1 + p2 #we overloaded the + operator by writing __add__ function
+p.print_points()
